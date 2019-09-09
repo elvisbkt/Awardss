@@ -11,14 +11,7 @@ class Category(models.Model):
         return self.category_name
 
 
-class Website(models.Model):
-    image = models.ImageField(upload_to = 'images/')
-    title = models.CharField(max_length = 100)
-    description = models.TextField(max_length = 200)
-    url = models.CharField(max_length = 200)
-    category = models.ManyToManyField('Category', related_name='images')
-    posted_on = models.DateTimeField(auto_now_add=True)
-    posted_by = models.ForeignKey(CustomUser, on_delete = models.CASCADE)
+
 
 
     class Meta:
