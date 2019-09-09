@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% load static%}
+{% load crispy_forms_tags %}
+{% load socialaccount %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/signup-in.css' %}">
+{%endblock%}
+
+{% block page_content %}
+
+    <!-- Full Page Intro -->
+    <div class="view full-page-intro">
+        <!-- Mask & flexbox options-->
+        <div class=" d-flex justify-content-center align-items-center">
+            <!-- Content -->
+            <div class="container py-5 px-5 my-5" >
+                <!--Grid row-->
+                <div class="row ">
+                    <!--Grid column-->
+                    <div class="col-md-6 mb-4 white-text text-center text-md-left ">
+                        <h1 class="display-4 font-weight-bold">A<strong>www</strong>ards</h1>
+                        <hr class="hr-light">
+                        <p>
+                            <h6>Welcome to A<strong>www</strong>ards!</h6><br>
+                            A platform where you can present your amazing web projects and see how you compare to your peers.
+                        </p>
+
+                        <a href="{% url 'login' %}"
+                            class="btn btn-indigo btn-lg">Log In
+                            <i class="fas fa-lock-open ml-2"></i>
+                        </a>
+                    </div>
+                    <!--Grid column-->
+                    <!--Grid column-->
+                    <div class="col-md-6 col-xl-6 mb-4" style = "font-size: 13px;">
+                        <!--Card-->
+                        <div class="card">
+                            <!--Card content-->
+                            <div class="card-body">
+                                <!-- Form -->
+                                    <!--<form action="/login/" method="post">-->
+                                    <form method="post">
+                                        {% csrf_token %}
+                                        <fieldset class="form-group">
+                                            {{ form |crispy }}
+                                        </fieldset>
+                                        <button type="submit" class="btn btn-indigo">Sign Up</button>
+
+                                        <p><a href="{% provider_login_url 'google' %}">Sign Up with Gmail</a></p>
+
+                                    </form>
+                                <!-- Form -->
+                            </div>
+                        </div>
+                        <!--/.Card-->
+                    </div>
+                    <!--Grid column-->
+                </div>
+                <!--Grid row-->
+            </div>
+            <!-- Content -->
+        </div>
+        <!-- Mask & flexbox options-->
+    </div>
+    <!-- Full Page Intro -->
+{% endblock %}
+
+
+
+
