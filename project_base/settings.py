@@ -182,7 +182,6 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 # demo_project/settings.py
@@ -191,11 +190,7 @@ LOGOUT_REDIRECT_URL = 'landing_index'
 
 LOGIN_URL='login'
 
-AUTHENTICATION_BACKENDS = (
-    
-    "django.contrib.auth.backends.ModelBackend",
-    "allauth.account.auth_backends.AuthenticationBackend",
-)
+
 
 SITE_ID = 1
 
