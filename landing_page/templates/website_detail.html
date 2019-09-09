@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+
+{% block page_content %}
+
+<div class="container">
+
+    <!--Grid row-->
+    <div class="row wow fadeIn jumbotron" style=" border-radius: 10px; background-color: #fff;">
+
+        <!--Grid column-->
+        <div class="col-lg-7 col-xl-7 mb-4">
+            <!--Featured image-->
+            <div class="view overlay rounded z-depth-1-half">
+                <div class="view overlay">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <img class="embed-responsive-item" src="{{ website.image.url }}">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-xl-4 ml-xl-4 mb-4">
+            <h3>Project by {{ website.posted_by }}</h3>
+            <img class="rounded-circle article-img" src="{{ website.posted_by.profile.website.url }}" height="30px">
+            <p>
+                Posted on {{ website.posted_on|date:"F d, Y" }}</strong>
+            </p>
+            <hr>
+            <p class="grey-text">{{ website.description }}</p>
+            <ul class="social">
+                    <li><a href="//{{ website.url }}" data-tip="Visit site"><i class="fa fa-eye"></i>
+                    Visit Site
+                    </a></li>
+                    <!-- <li><a href="" data-tip="Bookmark"><i class="fa fa-tag"></i></a></li> -->
+                </ul>
+
+        </div>
+
+        <!--Grid column-->
+
+    </div>
+
+</div>
+
+{% endblock %}

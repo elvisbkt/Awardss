@@ -1,0 +1,62 @@
+{% extends 'base.html'%}
+{% load crispy_forms_tags %}
+{% load static%}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/post_form.css' %}">
+{%endblock%}
+
+{% block page_content %}
+
+
+<!-- Contact Us Section -->
+<section class="Material-contact-section section-padding section-dark">
+    <div class="container">
+        <div class="row  mt-5">
+            <!-- Section Titile -->
+            <div class="col-md-12 wow animated fadeInLeft" data-wow-delay=".2s">
+                <h1 class="section-title">Present Your Work</h1>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Section Titile -->
+            <div class="col-md-12 mt-3 contact-widget-section2 wow animated fadeInLeft" data-wow-delay=".2s">
+                <p>Today you get the opportunity to present the project that you have been working hard on. You'll get to see how well your website compares to other developers as well as get insights and
+                    feedback on what you could improve on for this or any future projects. <br>
+                </p>
+                <p>The description is where you get the chance to elaborate your line of thought as you developed the project.
+                    What were the objectives, your approach and the creative twist you implemented.
+                </p>
+                <h6>Have a go!</h6>
+
+            </div>
+            <div class="col-md-12  mt-3  wow animated fadeInRight" data-wow-delay=".2s">
+
+                <!--Start form-->
+
+                <div class="shake">
+                    <h4>Website Detail</h4>
+                    <form method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="col-12">
+                            {{ form.title|as_crispy_field }}
+                        </div>
+                        <div class="col-12">
+                            {{ form.url|as_crispy_field }}
+                        </div>
+                        <div class="col-12">
+                        {{ form.description|as_crispy_field }}
+                        </div>
+                        <div for="filesToUpload" class="col-12 mb-0 mt-0">
+                            {{ form.image|as_crispy_field }}
+                            <hr>
+                        </div>
+                    <button type="submit" class="btn btn-primary">Post Details</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--End Form-->
+{% endblock %}
