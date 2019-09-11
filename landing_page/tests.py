@@ -7,7 +7,7 @@ class WebsiteTestCase(TestCase):
     def setUp(self):
 
         #Creating user instance
-        self.user1 = CustomUser(username = "Denis", email = "mwai@gmail.com", password = "qpalzm741")
+        self.user1 = CustomUser(username = "Denis", email = "elvo@gmail.com", password = "qpalzm741")
         self.user1.save()
 
         #Creating website details and saving
