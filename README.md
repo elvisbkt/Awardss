@@ -1,7 +1,7 @@
 # [Awwwards Application](https://Instaclone-application.herokuapp.com/)
 #### Web clone of the awwwards.com
-#### August 5th, 2019
-#### By **[Denis Githinji](https://github.com/dmwaigithinji)**
+#### September 8th, 2019
+#### By **[Elvis Biketi](https://github.com/elvisbkt)**
 
 ## Description
 This is a simple web clone of the awwwards website where users can share their web projects
@@ -18,10 +18,10 @@ and review other users web projects.
 
 ### Clone the Repo
 Run the following command on the terminal:
-`git clone https://github.com/Dmgithinji/awwwards.git && cd awwwards`
+`git clone https://github.com/elvisbkt/awwwards.git && cd awwwards`
 
 ### Activate virtual environment
-Activate virtual environment using python3.7 as default handler
+Activate virtual environment using python3.6 as default handler
 ```bash
 virtualenv -p /usr/bin/python3.6 venv && source venv/bin/activate
 ```
@@ -59,7 +59,7 @@ Open terminal on `localhost:8000`
 
 
 ## Technologies used
-    - Python 3.7
+    - Python 3.6
     - HTML
     - Bootstrap 4
     - JavaScript
@@ -68,7 +68,7 @@ Open terminal on `localhost:8000`
     - Postgresql
 
 ## Support and contact details
-Contact me on dmwaigithinji@gmail.com for any comments, reviews or advice.
+Contact me on elvisbkt@gmail.com for any comments, reviews or advice.
 
 ### License
-Copyright (c) **Dmgithinji**
+Copyright (c) **Elvisbkt**
