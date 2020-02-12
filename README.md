@@ -69,5 +69,5 @@ Open terminal on `localhost:8000`
 
 ## Support and contact details
 Contact me on elvisbkt@gmail.com for any comments, reviews or advice.
-https://elvis-awards.herokuapp.com/ ## License
+Alternate https://elvis-awards.herokuapp.com/ ## License
 Copyright (c) **Elvisbkt**
